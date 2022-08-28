@@ -1,0 +1,9 @@
+.orderSection {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.text{
+    width: 150px;
+    word-wrap: wrap;
+}
