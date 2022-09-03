@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Foods from "../Foods";
 import Orders from "../Orders";
+import Test from "../test";
+import Modal from "../modal";
 import "./style.css";
 
 class BuildControl extends Component {
@@ -34,13 +36,13 @@ class BuildControl extends Component {
             {
                 id : 3,
                 foodName: 'Italian Pasta',
-                price: '35',
+                price: '15',
                 ImgUrl: 'https://i2.wp.com/chilipeppermadness.com/wp-content/uploads/2021/07/Bucatini-all-Amatriciana-SQ.jpg'
             },
             {
                 id : 4,
                 foodName: 'Hawaii Pizza',
-                price: '7',
+                price: '30',
                 ImgUrl: 'https://www.drozshow.com/media-library/image.jpg?id=24952787&width=980&quality=85'
             },
             {
@@ -75,6 +77,7 @@ class BuildControl extends Component {
             },
         ],
         TotalPrice: 0,
+        modal: false
     };
     AddFood=(id, TotalUne)=>{
         const AddFood = {...this.state.order};
@@ -100,13 +103,22 @@ class BuildControl extends Component {
             this.setState({order: RemoveFood, TotalPrice : TotalPrice});
         }
     };
+    showModal = () =>{
+        this.setState({modal : true})
+        console.log("ajillaaa")
+
+
+    }
 render(){
     console.log(this.state.order[1]);
     return(
         <div className="BuildControlSection"> 
             <Foods foods={this.state.foods} FoodNemeh={this.FoodNemeh}/>
-            <Orders AddFood={this.AddFood} RemoveFood={this.RemoveFood} order={this.state.order} foods={this.state.foods} TotalPrice={this.state.TotalPrice}
+            <Orders AddFood={this.AddFood} RemoveFood={this.RemoveFood} order={this.state.order} foods={this.state.foods} TotalPrice={this.state.TotalPrice} show={this.showModal}
             />
+            <Modal show={this.state.modal}>
+            <Test foods={this.state.foods} order={this.state.order}/>
+            </Modal>
 
         </div>
     );

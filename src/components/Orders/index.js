@@ -2,7 +2,7 @@ import React from "react";
 import Order from "../Order"
 function Orders(props) {
     let test = [];
-    props.foods.map((el) => {
+    props.foods.map((el)=> {
         if(props.order[el.id] > 0){
             test.push(<Order 
                 ner={el.foodName} 
@@ -15,7 +15,8 @@ function Orders(props) {
         }
     });
     return <div>{test}
-    <p>Total Price : {props.TotalPrice}</p>
+    <p>Total Price : {props.TotalPrice} $</p>
+    <p><button onClick={props.show}>Confirm Order</button></p>
     </div>;
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './style.module.css'
+
 function Order(props) {
     
     return ( 
@@ -12,7 +13,7 @@ function Order(props) {
             <p>{props.price}</p>
         </div>
         
-     );
+    );
 }
 
 export default Order;
