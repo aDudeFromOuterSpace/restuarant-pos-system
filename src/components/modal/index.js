@@ -1,7 +1,9 @@
 import React from 'react';
+import style from './style.module.css'
+
 function Modal(props) {
-    return (<div
-    style={{transform : props.show ? 'translateY(0)' : 'translateY(-100vh)'}}>
+    return (<div className={style.modal}
+    style={{transform : props.show ? 'translateY(0)' : 'translateY(-200vh)'}}>
         {props.children}
     </div>);
 }

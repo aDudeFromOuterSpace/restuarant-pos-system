@@ -5,7 +5,7 @@ function Order(props) {
     
     return ( 
         <div className={style.orderSection}>
-            <span> <img className={style.ImgUrl} src={props.ImgUrl} alt="GenericPlaceholder"/></span>
+            <span> <img className={style.ImgUrl} src="ImgUrl" alt="GenericPlaceholder"/></span>
             <span> <p className={style.text}>{props.ner}</p></span>
             <button onClick={()=>props.RemoveFood(props.id, props.price)} className={style.Minus}>-</button>
             <p>{props.order}</p>

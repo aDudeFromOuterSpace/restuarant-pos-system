@@ -1,7 +1,6 @@
 .Foods{
     width: 70%;
-    border: 5px Solid red;
-    scroll-behavior: smooth;
+    border: 25px Solid white;
     height: 95vh;
     overflow-y: scroll;
     display: flex;

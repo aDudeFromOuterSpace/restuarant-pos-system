@@ -1,0 +1,8 @@
+.modal{
+    width: 500px;
+    z-index: 500;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: aliceblue;
+}
