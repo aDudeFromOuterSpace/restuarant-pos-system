@@ -1,0 +1,11 @@
+.Foods{
+    width: 70%;
+    border: 25px Solid white;
+    height: 95vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 5%;
+    background-image: linear-gradient(red, orange, yellow);
+}
